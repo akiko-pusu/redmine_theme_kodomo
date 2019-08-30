@@ -1,0 +1,116 @@
+/* load the default Redmine stylesheet */
+
+@import url(../../../stylesheets/application.css);
+
+@font-face {
+  font-family: anzu;
+  src: url("../font/APJapanesefont.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: anzuT;
+  src: url("../font/APJapanesefontT.ttf") format("truetype")
+}
+
+@media screen and (max-width: 899px) {
+  #header {
+    background-image: none;
+  }
+  #project-jump.drdn {
+    background-color: rgb(74, 114, 174);
+    color: #560202;
+  }
+}
+
+body {
+  font-family: anzu, Verdana, sans-serif;
+  font-size: 20px;
+  color: rgb(109, 4, 4);
+}
+
+h1, h2, h3, h4 {
+  font-family: anzu;
+  padding: 2px 10px 1px 0px;
+  margin: 0 0 10px 0;
+}
+
+pre, code {
+  font-family: anzuT, Consolas, Menlo, "Liberation Mono", Courier, monospace;
+}
+
+a, a:link, a:visited {
+  color: rgb(103, 7, 7);
+  text-decoration: none;
+}
+
+
+#header {
+  background: white url(../images/logo.png) no-repeat 10px;
+  background-position: 20px 20px;
+  padding-left: 86px;
+  border-color: bisque;
+  color: #730000;
+  border-width: thin;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#header h1 {
+    text-align: 60px;
+    line-height: 80px;
+    font-size: 28pt;
+}
+
+#top-menu {
+  background: #efe0d9;
+  color: #420707;
+}
+
+#top-menu a {
+  color: #671515;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+#top-menu #loggedas {
+  float: right;
+  margin-right: 0.5em;
+  color: #900000;
+}
+
+#sidebar {
+  background: #fdf5f5;
+  border-left: 1px solid #efdcdc;
+}
+
+.box {
+  background-color: #fbf4ed;
+  color: #4c0a0a;
+  border: 1px solid #ecd6ad;
+  border-radius: 6px;
+}
+
+#content .tabs ul li:hover {
+  background-color: #ffffe2;
+}
+
+#content .tabs ul li a {
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbbbbb;
+  color: #8a3737;
+}
+
+
+.nodata, .warning {
+  text-align: center;
+  background-color: #fdf2cb;
+  border-color: #f5b9b96e;
+  color: #820505;
+}
+
+#projects-index ul.projects div.root a.project {
+  font-family: "anzu";
+  font-size: 18px;
+}
