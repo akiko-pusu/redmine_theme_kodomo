@@ -42,8 +42,8 @@ ja:
   field_tracker: おしごとのしゅるい
   label_role_and_permissions: やくわりとできること
   label_group_plural: ぐるーぷ
-  label_user_plural: つかうなかまたち
-  label_user: つかうなかまたち
+  label_user_plural: つかうなかま
+  label_user: つかうなかま
   field_user: つかうなかまたち
   label_search: たんごをいれてしらべる
   label_logout: おしごとおしまいにする
@@ -58,7 +58,26 @@ ja:
   label_gantt: はたらきぐあいをみるぐらふ
   label_spent_time: かかったじかん
   label_time_entry_plural: かかったじかん
-  label_project_plural: ぷろじぇくと
-  label_project: ぷろじぇくと
+  label_project_plural: ひみつきち
+  label_project: ひみつきち
   label_activity: やったこと
-  field_project: ぷろじぇくと
+  field_project: ひみつきち
+  label_jump_to_a_project: ひみつきちにいくよ！
+  label_user_new: あたらしいなかま
+  label_user_anonymous: ないしょのなかま
+  label_profile: じぶんのしょうかい
+  label_project_new: あたらしいひみつきち
+  label_x_projects:
+    zero: ひみつきちはありません
+    one: ひみつきち：1こ
+    other: ひみつきち：%{count}こ
+  label_project_all: ぜんぶのひみつきち
+  label_assigned_issues: じぶんのちけっと
+  label_last_login: さいきんつかったのはいつ？
+  label_registered_on: さいしょにつかったひ
+  label_overall_activity: いままででやったこと
+  label_user_activity: "%{value} のやったこと"
+  label_new: あたらしくつくるよ！
+  field_last_login_on: さいきんつかったのはいつ？
+  label_reported_issues: きょうりょくしたちけっと
+  label_assigned_to_me_issues: じぶんのちけっと
