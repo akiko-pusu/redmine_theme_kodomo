@@ -70,9 +70,14 @@ a, a:link, a:visited {
 
 #top-menu a {
   color: #671515;
-  margin-right: 8px;
+  margin-right: 10px;
   font-weight: bold;
 }
+
+#top-menu a:hover {
+  color: #b50000;
+}
+
 
 #top-menu #loggedas {
   float: right;
@@ -90,6 +95,9 @@ a, a:link, a:visited {
   color: #4c0a0a;
   border: 1px solid #ecd6ad;
   border-radius: 6px;
+}
+#content {
+  font-size: 18px;
 }
 
 #content .tabs ul li:hover {
@@ -113,4 +121,71 @@ a, a:link, a:visited {
 #projects-index ul.projects div.root a.project {
   font-family: "anzu";
   font-size: 18px;
+}
+
+#quick-search > form > label > a {
+  color: #820505;
+}
+
+#quick-search > form > label > a:before {
+  content: "┥";
+  top: 6px;
+  font-size: 16px;
+  color: #c99696;
+}
+
+#main-menu li {
+  margin: 0px 4px 0px 0px;
+}
+
+#main-menu li a {
+  background-color: #fbf4ed;
+  border: 1px solid #ecd6ad;
+  border-bottom-style: none;
+  border-radius: 6px 6px 0 0;
+  color: #5c0909;
+  position: relative;
+  padding-left: 1.2em;
+  font-weight: normal;
+  font-size: 13pt;
+}
+
+#main-menu li a:before {
+  content: "┸";
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  font-size: 16px;
+  color: #d58787;
+}
+
+#main-menu li a:hover {
+  background: rgb(224, 166, 160);
+  color: #fff;
+}
+
+#main-menu li a.selected:hover {
+  background: #fff;
+  color: rgb(142, 15, 15);
+}
+
+#main-menu li a.selected {
+  background-color: #f4e9e4;
+  color: #740404;
+}
+
+table.list:not(.odd-even) tbody tr:nth-child(even), .even {
+  background-color: #f8f1f0;
+}
+
+table.list:not(.odd-even) tbody tr:nth-child(odd), .odd {
+  background-color: #ffff;
+}
+
+table.list th, .table-list-header {
+  background-color: #f1dada;
+}
+
+#content > div.splitcontent {
+  font-size: 16px
 }
