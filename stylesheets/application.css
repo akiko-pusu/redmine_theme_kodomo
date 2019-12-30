@@ -12,15 +12,6 @@
   src: url("../font/APJapanesefontT.ttf") format("truetype")
 }
 
-@media screen and (max-width: 899px) {
-  #header {
-    background-image: none;
-  }
-  #project-jump.drdn {
-    background-color: rgb(74, 114, 174);
-    color: #560202;
-  }
-}
 
 body {
   font-family: anzu, Verdana, sans-serif;
