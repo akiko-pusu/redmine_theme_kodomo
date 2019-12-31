@@ -12,7 +12,6 @@
   src: url("../font/APJapanesefontT.ttf") format("truetype")
 }
 
-
 body {
   font-family: anzu, Verdana, sans-serif;
   font-size: 20px;
@@ -33,7 +32,6 @@ a, a:link, a:visited {
   color: rgb(103, 7, 7);
   text-decoration: none;
 }
-
 
 #header {
   background: white url(../images/logo.png) no-repeat 10px;
@@ -179,4 +177,102 @@ table.list th, .table-list-header {
 
 #content > div.splitcontent {
   font-size: 16px
+}
+
+div[id^="note-"] {
+  border: 1px dotted rgb(183, 182, 181);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #fff6ed;
+}
+
+h4.note-header::before {
+  content: "┥";
+  font-size: 12pt;
+  top: 6px;
+}
+
+div.wiki, div.value {
+  color: rgb(36, 2, 2);
+}
+
+div.description {
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 0.5px dashed rgb(183, 182, 181);
+  background-color: white;
+  border-radius: 6px;
+}
+
+div.description > p > strong {
+  position: relative;
+  color: #832929;
+  padding: 0.5em 1em 0.5em 2em;
+  background-color: #ffe5b3;
+  border-radius: 0.5em;
+}
+
+div.description > p > strong::after {
+  position: absolute;
+  top: 50%;
+  left:1em;
+  transform:translateY(-50%);
+  content: '';
+  width: 13px;
+  height:13px;
+  background-color: white;
+  border-radius:100%;
+}
+
+div.description div.wiki {
+  background-color: white;
+  /* border: 0.5px dotted rgb(183, 182, 181); */
+  border-radius: 2px;
+  padding-left: 4px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0) 97%,
+      #ddd 97%,
+      #ddd 100%
+    );
+  background-size:100% 1.8em;
+  line-height: 1.8;
+}
+
+div.issue .attributes .attribute .label {
+  border-bottom: 1px dotted rgb(183, 182, 181);
+  color: #962500;
+}
+
+div.issue {
+  background: #fffdf6;
+}
+
+#tab-content-history.tab-content {
+  padding: 0 6px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+#content .tabs ul li a {
+  display: block;
+  font-size: 0.9em;
+  text-decoration: none;
+  line-height: 1.3em;
+  padding: 4px 6px 4px 6px;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbbbbb;
+  color: #999;
+  font-weight: bold;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #fff4e2;
+}
+
+div.issue p.author {
+  margin-top: 0.5em;
+  font-size: 0.8em;
 }

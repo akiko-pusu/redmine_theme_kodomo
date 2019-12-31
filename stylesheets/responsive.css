@@ -40,19 +40,25 @@
     margin: 0;
     padding: 0;
     color: rgb(111, 8, 8);
-    background-color: #eabebe;
+    background-color: #f5cfcf;
   }
 
   .flyout-menu a {
     color: rgb(111, 8, 8);
+    font-size: 16px;
+  }
+
+  .flyout-menu ul li a:hover {
+    background-color: rgb(179, 55, 55);
+    color: #fcf7f7;
   }
 
   .flyout-menu h3 {
-    font-size: 11px;
+    font-size: 16px;
     line-height: 19px;
     height: 20px;
     margin: 0;
-    padding: 0;
+    padding-left: 4px;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: white;
@@ -60,6 +66,15 @@
     border-bottom: 1px solid #570419;
     background-color: #721531;
   }
+
+  .flyout-menu h3::before {
+    content: "┸";
+    left: 3px;
+    top: 6px;
+    font-size: 14px;
+    color: white;
+  }
+
 
   .mobile-toggle-button:after {
     color: rgb(111, 8, 8);
