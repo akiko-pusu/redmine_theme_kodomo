@@ -1,4 +1,4 @@
-# Redmine theme forkids / Kodomo Redmine
+# Redmine theme for kids / Kodomo Redmine
 
 Redmine theme for kids and children.
 
