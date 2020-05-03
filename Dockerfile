@@ -24,7 +24,6 @@ RUN apt-get install -qq -y --no-install-recommends \
 RUN cd /app && svn co http://svn.redmine.org/redmine/branches/4.0-stable/ redmine
 WORKDIR /app/redmine
 
-
 # add database.yml (for development, development with mysql, test)
 RUN echo $'test:\n\
   adapter: sqlite3\n\
