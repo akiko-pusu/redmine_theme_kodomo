@@ -134,4 +134,6 @@ docker run --rm -d -p 3000:3000/tcp redmine_theme_kodomo_container:latest
 
 ## ChangeLog
 
+- 0.0.2
+  - Add great-job.png /Change border style of sidemenu (In responsive mode)
 - First Release: 0.0.1
