@@ -43,6 +43,16 @@
     background-color: #f5cfcf;
   }
 
+  .flyout-menu ul li a {
+    line-height: 40px;
+    display: block;
+    overflow: hidden;
+    height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-top: 2px dashed white;
+  }
+
   .flyout-menu a {
     color: rgb(111, 8, 8);
     font-size: 16px;

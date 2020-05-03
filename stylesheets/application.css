@@ -74,9 +74,12 @@ a, a:link, a:visited {
   color: #900000;
 }
 
+#main {
+  background: #fdf5f5;
+}
+
 #sidebar {
   background: #fdf5f5;
-  border-left: 1px solid #efdcdc;
 }
 
 .box {
@@ -85,6 +88,7 @@ a, a:link, a:visited {
   border: 1px solid #ecd6ad;
   border-radius: 6px;
 }
+
 #content {
   font-size: 18px;
 }
@@ -258,6 +262,13 @@ div.issue .attributes .attribute .label {
 
 div.issue {
   background: #fffdf6;
+}
+
+div.issue.closed {
+  background-image: url(../images/great-job.png);
+  background-repeat: no-repeat;
+  background-position: right 0px top 10px;
+  background-size: 160px;
 }
 
 #tab-content-history.tab-content {
