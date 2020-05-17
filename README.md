@@ -15,9 +15,10 @@ If you are interested, try creating a theme for kids and different generations!
 - [Installation](#installation)
 - [docker-compose](#docker-compose)
 - [for Japanese Users](#for-japanese-users)
-  - [Webフォントについて](#webフォントについて)
-    - [配布サイト](#配布サイト)
-    - [利用フォント](#利用フォント)
+  - [利用しているフォントについて](#利用しているフォントについて)
+    - [あんずもじのご利用について](#あんずもじのご利用について)
+      - [配布サイト](#配布サイト)
+      - [配置手順](#配置手順)
   - [配置方法](#配置方法)
     - [テーマのみの配置](#テーマのみの配置)
     - [メッセージのカスタマイズ](#メッセージのカスタマイズ)
@@ -57,20 +58,58 @@ You can try this theme via Docker.
 
 ## for Japanese Users
 
-### Webフォントについて
+### 利用しているフォントについて
 
-こちらのテーマでは、以下のフォントを利用させていただいております。ありがとうございます！
+こちらのテーマでは、以下のフォントの利用を想定しています。
+日本語に関しては、「あんずもじ」の利用を想定してのデザインになっております。
+お手数をおかけしますが、各自お手元でのフォントのダウンロードをお願いいたします。
 
-#### 配布サイト
+**英語**
+
+- Google fonts - [Patrick Hand](https://fonts.google.com/specimen/Patrick+Hand)
+ - Designer: Patrick Wagesreiter
+ - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+ - https://fonts.google.com/specimen/Patrick+Hand
+
+**日本語**
+
+- Google fonts - [Kosugi Maru](https://fonts.google.com/specimen/Noto+Serif+JP) (as 'Noto Serif JP')
+  - Designer: MOTOYA
+  - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+  - https://fonts.google.com/specimen/Noto+Serif+JP
+- あんずもじ
+  - あんずもじに関しては、各自でのダウンロードと配置をお願いします
+  - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
+
+#### あんずもじのご利用について
+
+大変可愛らしい文字ですので、もしお手元でご利用の際に組み込み可能でしたら、是非ご利用してみてください！
+あんずもじを利用するに当たって、以下の通りにお願いいたします。
+
+##### 配布サイト
 
 - あんずいろapricot×color
-- 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html>
-- 作成者：京風子（Kyoko）さま
+ - 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html>
+ - 作成者：京風子（Kyoko）さま
 
-#### 利用フォント
+##### 配置手順
 
-- あんずもじ
-- あんずもじ等幅
+- 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html> からフォントのダウンロードをお願いします
+  - あんずもじ
+  - あんずもじ等幅
+- font というディレクトリに、以下のように配置をお願いします
+
+```bash
+
+$ tree font
+font
+├── APJapanesefont.ttf
+└── APJapanesefontT.ttf
+
+```
+
+- データ名はapplication.css に記載と同じとなります
+- 配置の上でRedmineの再起動をお願いいたします
 
 ### 配置方法
 
