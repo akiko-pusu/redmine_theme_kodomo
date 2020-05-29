@@ -35,7 +35,7 @@ If you are interested, try creating a theme for kids and different generations!
 
 ## Screen shot
 
-![Screen shot](images/screenshot.png)
+<img src='images/screenshot.png' width='400'>
 
 ## Sample Movie
 
