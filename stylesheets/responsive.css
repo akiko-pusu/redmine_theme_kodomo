@@ -1,20 +1,37 @@
-
 @import url(../../../stylesheets/responsive.css);
 
 @media screen and (max-width: 899px) {
-
   #header {
-    background-image: none;
+    background: #fff5f1;
+    background-image: repeating-linear-gradient(54deg, rgba(255, 127, 127, 0.13), rgba(255, 127, 127, 0.13) 42px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 84px), repeating-linear-gradient(144deg, rgba(255, 127, 127, 0.10), rgba(255, 127, 127, 0.10) 42px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 84px);
   }
 
   #content > .contextual {
     background: white url(../images/logo-responsive.png) no-repeat 10px;
     background-position: right top;
+    background-size: contain;
   }
 
-  #project-jump.drdn {
-    background-color: #efe0d9;
-    color: #560202;
+  #content > h2 {
+    position: initial;
+    padding-left: 0;
+  }
+
+  #content > h2:before {
+    position: relative;
+    left: 5px;
+    top: 0px;
+    content: "";
+    font-size: 0.8em;
+
+    padding: 0 0.8em 0 0.2em;
+    background: #ffbd6b;
+    color: #fff;
+    height: 1em;
+    width: 0.8em;
+    text-align: center;
+    border-radius: 80% 3%;
+    margin-right: 10px;
   }
 
   #project-jump .drdn-trigger {
@@ -22,7 +39,7 @@
     font-weight: bold;
     display: block;
     width: 100%;
-    color: #7a2424;
+    color: #b13131;
     padding-left: 24px;
     background: transparent;
     height: 50px;
@@ -39,8 +56,8 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    color: rgb(111, 8, 8);
-    background-color: #f5cfcf;
+    color: #b13131;
+    background-color: #fddfd1;
   }
 
   .flyout-menu ul li a {
@@ -50,44 +67,72 @@
     height: 40px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    border-top: 2px dashed white;
+    border-top: 2px dashed rgba(245, 171, 132, 0.42);
+    /* border-bottom: 2px dashed rgba(187, 69, 6, 0.681); */
   }
 
   .flyout-menu a {
-    color: rgb(111, 8, 8);
+    color: #643503;
     font-size: 16px;
   }
 
   .flyout-menu ul li a:hover {
-    background-color: rgb(179, 55, 55);
-    color: #fcf7f7;
+    background-color: rgb(249, 200, 181);
+    color: #930700;
+  }
+
+  .flyout-menu ul li a::before {
+    position: relative;
+    left: 5px;
+    top: 0px;
+    content: '●';
+    color: white;
+    margin-right: 8px;
+    margin-right: 10px;
   }
 
   .flyout-menu h3 {
-    font-size: 16px;
-    line-height: 19px;
-    height: 20px;
+    font-size: 20px;
+    line-height: 22px;
+    height: 26px;
     margin: 0;
     padding-left: 4px;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
-    border-top: 1px solid #570419;
-    border-bottom: 1px solid #570419;
-    background-color: #721531;
+    background-color: #dd3c3c;
+    border: none !important;
+    border-left: solid 12px #ff8d8d !important;
   }
 
-  .flyout-menu h3::before {
-    content: "┸";
-    left: 3px;
-    top: 6px;
-    font-size: 14px;
-    color: white;
+  .mobile-toggle-button {
+    border-left: 2px dotted #efb7b7;
   }
-
 
   .mobile-toggle-button:after {
-    color: rgb(111, 8, 8);
+    color: #f99898
+  }
+
+  .flyout-menu__avatar a:first-child {
+    margin-bottom: 6px;
+    margin-left: 4px;
+  }
+
+  #theme_info .theme_description {
+    left: -100px;
+  }
+
+  div#issue-changesets {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  div#issue-changesets div.changeset {
+    display: block;
+  }
+
+  body.controller-issues.action-show div#content {
+    margin: 0 auto;
+    width: 100%;
   }
 }
-
