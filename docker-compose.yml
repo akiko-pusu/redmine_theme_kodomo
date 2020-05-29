@@ -8,17 +8,11 @@ services:
   web:
     build:
       context: .
-    image: redmine_sqlite3
-    container_name: redmine_sqlite3
-    command: >
-      bash -c "bundle &&
-           bundle exec rake db:migrate &&
-           bundle exec rake redmine:plugins:migrate &&
-           bundle exec rake generate_secret_token &&
-           bundle exec rails s -p 3000 -b '0.0.0.0'"
+    container_name: redmine_theme_kodomo
     environment:
       RAILS_ENV: development
     volumes:
       - .:/app/redmine/public/themes/redmine_theme_kodomo
+      - ./.data:/app/data
     ports:
       - "3000:3000"

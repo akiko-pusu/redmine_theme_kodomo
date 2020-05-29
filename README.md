@@ -16,6 +16,8 @@ If you are interested, try creating a theme for kids and different generations!
 - [docker-compose](#docker-compose)
 - [for Japanese Users](#for-japanese-users)
   - [利用しているフォントについて](#利用しているフォントについて)
+    - [きろ字のご利用について](#きろ字のご利用について)
+      - [きろ字情報](#きろ字情報)
     - [あんずもじのご利用について](#あんずもじのご利用について)
       - [配布サイト](#配布サイト)
       - [配置手順](#配置手順)
@@ -23,7 +25,9 @@ If you are interested, try creating a theme for kids and different generations!
     - [テーマのみの配置](#テーマのみの配置)
     - [メッセージのカスタマイズ](#メッセージのカスタマイズ)
   - [おためし用Dockerfile](#おためし用dockerfile)
-  - [お試し用のメッセージのファイル](#お試し用のメッセージのファイル)
+    - [ローカルで直にビルドして起動する場合](#ローカルで直にビルドして起動する場合)
+    - [テーマを編集開発しながら起動する場合](#テーマを編集開発しながら起動する場合)
+- [テーマのカスタマイズ](#テーマのカスタマイズ)
 - [Special Thanks](#special-thanks)
 - [ChangeLog](#changelog)
 
@@ -58,10 +62,11 @@ You can try this theme via Docker.
 
 ## for Japanese Users
 
+
 ### 利用しているフォントについて
 
 こちらのテーマでは、以下のフォントの利用を想定しています。
-日本語に関しては、「あんずもじ」の利用を想定してのデザインになっております。
+日本語に関しては、「きろ字 / Kosugi Maru / あんずもじ」の利用を想定してのデザインになっております。
 お手数をおかけしますが、各自お手元でのフォントのダウンロードをお願いいたします。
 
 **英語**
@@ -73,13 +78,43 @@ You can try this theme via Docker.
 
 **日本語**
 
-- Google fonts - [Kosugi Maru](https://fonts.google.com/specimen/Noto+Serif+JP) (as 'Noto Serif JP')
+- きろ字
+  - New BSDライセンスに基づくきろ字をメインのフォントとして利用させていただきます
+  - https://ola.kironono.com/entry/fonts-kiloji
+  - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
+- Google fonts - [Kosugi Maru](https://fonts.google.com/specimen/Kosugi+Maru) (as 'Kosugi Maru')
   - Designer: MOTOYA
   - License: [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
-  - https://fonts.google.com/specimen/Noto+Serif+JP
+  - https://fonts.google.com/specimen/Kosugi+Maru
 - あんずもじ
   - あんずもじに関しては、各自でのダウンロードと配置をお願いします
   - フォントが組み込まれない場合は、デフォルトの日本語フォントが利用されます
+
+#### きろ字のご利用について
+
+New BSDライセンスで利用可能な「きろ字」をメインのフォントとして利用させていただききました。
+ttfからwoffへ変換して利用としております。
+
+##### きろ字情報
+
+- 手書き風総合書体「きろ字」
+ - 詳細情報: <https://ola.kironono.com/entry/fonts-kiloji>
+ - 作成者: kilo さま
+
+```
+% tree font
+font
+└── kiloji
+    ├── License.txt
+    ├── kiloji.ttf
+    ├── kiloji.woff
+    ├── kiloji_b.ttf
+    └── kiloji_b.woff
+
+1 directory, 5 files
+```
+
+標準フォント、Google fontでのご利用に切り替えたい場合は、以下の方法でfonts.cssを調節してください。
 
 #### あんずもじのご利用について
 
@@ -90,7 +125,7 @@ You can try this theme via Docker.
 
 - あんずいろapricot×color
  - 配布サイトURL: <http://www8.plala.or.jp/p_dolce/index.html>
- - 作成者：京風子（Kyoko）さま
+ - 作成者: 京風子（Kyoko）さま
 
 ##### 配置手順
 
@@ -108,7 +143,9 @@ font
 
 ```
 
-- データ名はapplication.css に記載と同じとなります
+- フォントはfonts.css に記載と同じとなります
+- fonts.css の設定で、'Patrick Hand' の後に 'anzu' を指定して下さい
+  - 例: ``font-family: 'Patrick Hand', 'anzu', 'kiroji_b', 'Kosugi Maru'``
 - 配置の上でRedmineの再起動をお願いいたします
 
 ### 配置方法
@@ -126,7 +163,7 @@ $ tree -L 1
 ├── README
 ├── alternate
 ├── classic
-└── kodomo
+└── redmine_theme_kodomo
 
 3 directories, 1 file
 ```
@@ -141,7 +178,9 @@ $ tree -L 1
 
 ### おためし用Dockerfile
 
-このリポジトリの直下にDockerfileがありますので、テーマと``redmine_message_customize`` プラグインを併用した形での簡単な確認が可能です。
+このリポジトリの直下にDockerfileがありますので、簡単な確認が可能です。
+
+#### ローカルで直にビルドして起動する場合
 
 ```bash
 # build image
@@ -151,28 +190,43 @@ docker build -t redmine_theme_kodomo_container:latest .
 docker run --rm -d -p 3000:3000/tcp redmine_theme_kodomo_container:latest
 ```
 
-コンテナを起動後、アカウント:admin / パスワード: admin_kodomo_redmine でログインできます。
+コンテナを起動後、アカウント:admin / パスワード: admin でログインできます。
 
-### お試し用のメッセージのファイル
+#### テーマを編集開発しながら起動する場合
 
-こちらのファイルになります。
+```bash
+git clone https://github.com/akiko-pusu/redmine_theme_kodomo
+cd redmine_theme_kodomo
+docker-compose build --no-cache
+docker-compose up -d
+```
 
-- [i18n/message_ja.yml]('./i18n/message_ja.yml')
-- redmine_message_customizeの設定画面に貼り付けると更新が適用されます！
-  - おためし用Dockerfileで作成したコンテナには、上記のメッセージが適用されます
-  - プルリクやご自身でのカスタマイズもどうぞ！
-- 基本はRedmineのリポジトリの ja.yml ファイルを置き換える形式になります
-  - <https://github.com/redmine/redmine/blob/master/config/locales/ja.yml>
+上記で、テーマが適用された状態でRedmineが起動します。
+http://localhost:3000/ にアクセスしてください。
+
+また、該当のディレクトリで、直にCSS, JavaScriptを編集しつつ、動作確認ができます。
+
+
+## テーマのカスタマイズ
+
+粗いCSSですが、ソースを見ていただくとどのあたりを修正しているかがわかるかと思います。
+また、theme.js を修正することで、プラグイン形式にしなくても、簡単なコンテンツの差込なども可能です。
+画像やフォント、メッセージを調整してみてください！
 
 ## Special Thanks
 
-- @ishikawa999
-- FAR END Technologies Corporation - <https://www.farend.co.jp/>
 - Redmine.org - <https://redmine.org/>
 - Japanese Redmine Community - <http://redmine.jp/community/>
+- Font developers
 
 ## ChangeLog
 
+- 0.0.3
+  - Change loading style when login / logout.
+  - Add CSS file for Redmine Banner.
+  - Use kiloji as Japanese font.
+  - Update style for administration.
+  - Change base style. (The same to ``redmine_theme_kodomo_midori``)
 - 0.0.2
   - Add great-job.png /Change border style of sidemenu (In responsive mode)
 - First Release: 0.0.1
