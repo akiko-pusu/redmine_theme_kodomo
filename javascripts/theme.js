@@ -86,7 +86,7 @@ const setThemeInfo = () => {
       infoText = infoText + '</pre></div>'
     }
 
-    let beforeText = '/ Theme: <span id="theme_info">Kodomo Redmine green' + infoText + '</span> version'
+    let beforeText = '/ Theme: <span id="theme_info">Kodomo Redmine tea rose' + infoText + '</span> version'
     footer.innerHTML += beforeText
 
     // hide Wiki
