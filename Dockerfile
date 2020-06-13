@@ -21,7 +21,7 @@ RUN apt-get install -qq -y --no-install-recommends \
     git vim subversion libpq-dev \
     sqlite3 && rm -rf /var/lib/apt/lists/*
 
-RUN cd /app && svn co http://svn.redmine.org/redmine/branches/4.0-stable/ redmine
+RUN cd /app && svn co http://svn.redmine.org/redmine/branches/4.1-stable/ redmine
 WORKDIR /app/redmine
 
 # install redmine_theme_kodomo theme
