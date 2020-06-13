@@ -224,7 +224,7 @@ http://localhost:3000/ にアクセスしてください。
 - 0.0.4
   - Update Dockerfile. (To use Redmine 4.1-stable.)
   - Apply flash message (success / error) style.
-  - Enabled to show theme infomation at the footer.
+  - Enabled to show theme information at the footer.
   - Update some styles.
 - 0.0.3
   - Change loading style when login / logout.
