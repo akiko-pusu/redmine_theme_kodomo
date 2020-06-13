@@ -146,7 +146,7 @@
 }
 
 .float {
-  animation: float_frame 1s linear infinite;
+  animation: float_frame 2s linear infinite;
   transform-origin: 50% 50%;
 }
 
@@ -164,7 +164,7 @@
 
 @keyframes float_frame {
   0% { transform: translateY(0) }
-  50% { transform: translateY(-6px) }
+  50% { transform: translateY(-16px) }
   100% { transform: translateY(0) }
 }
 
