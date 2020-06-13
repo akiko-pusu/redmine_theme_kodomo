@@ -9,6 +9,7 @@ body {
   font-family: var(--font-family);
   font-size: 20px;
   color: rgb(109, 4, 4);
+  background-color: #ffffff !important;
 }
 
 h1,
@@ -22,7 +23,6 @@ h4 {
 
 h2 {
   padding: 10px;
-  background-color: #fff;
   border-bottom: 2px dashed rgba(187, 69, 6, 0.681);
   position: initial;
   padding-left: 0px;
@@ -34,8 +34,24 @@ h2:before {
   top: 0px;
   content: "";
   font-size: 0.8em;
-  padding: 0 0.8em 0 0.2em;
+  padding: 0 0.8em 0 0.6em;
   background: #f98883;
+  color: #fff;
+  height: 1em;
+  width: 0.8em;
+  text-align: center;
+  border-radius: 80% 3%;
+  margin-right: 10px;
+}
+
+h3:before {
+  position: relative;
+  left: 5px;
+  top: 0px;
+  content: "";
+  font-size: 0.6em;
+  padding: 0 0.8em 0 0.6em;
+  background: #ffcab3;
   color: #fff;
   height: 1em;
   width: 0.8em;
@@ -90,6 +106,19 @@ body.controller-welcome.action-index div#content div.splitcontentleft > .wiki {
 body.controller-welcome.action-index div#content .wiki p {
   margin: 0;
   padding: 0;
+}
+
+body.controller-projects.action-show div#content div.splitcontentleft {
+  margin-right: 10px;
+}
+
+body.controller-projects.action-show div#content div.splitcontentleft > .wiki {
+  border-radius: 6px;
+  position: relative;
+  background: #ebf6e9;
+  outline: 2px dashed rgb(163, 185, 178);
+  outline-offset: -5px;
+  padding: 0.2em 1em;
 }
 
 pre,
@@ -238,6 +267,10 @@ body.controller-issues.action-show div#content {
   font-size: 28pt;
 }
 
+#header a {
+  color: #912828;
+}
+
 #top-menu {
   background: #fbeae4;
   color: #420707;
@@ -270,6 +303,10 @@ body.controller-issues.action-show div#content {
   background: #fdf5f5;
 }
 
+#sidebar {
+  background: #fff7f4;
+}
+
 #sidebar ul {
   padding: 0;
   width: 370px;
@@ -282,7 +319,7 @@ body.controller-issues.action-show div#content {
   margin-bottom: 5px;
   font-size: 15px;
   font-weight: bold;
-  border-bottom: 1px dashed rgba(250, 185, 129, 0.4);
+  border-bottom: 2px dashed rgba(250, 185, 129, 0.6);
 }
 
 #sidebar ul li:after,
@@ -589,6 +626,26 @@ div#admin-index > #admin-menu li:hover {
   border-left: 1px solid #c6ad35;
 }
 
+table.list {
+  border-collapse: collapse;
+}
+
+table.list tbody > tr {
+  border-bottom: 1px solid #f3e3dd;
+}
+
+table.list thead > tr {
+  border-top: #e3b1a3bf;
+  border-top-style: solid;
+  border-width: 3px;
+}
+
+table.list tbody > tr:last-child {
+  border-bottom: #e3b1a3bf;
+  border-bottom-style: solid;
+  border-width: 3px;
+}
+
 table.list:not(.odd-even) tbody tr:nth-child(even),
 .even {
   background-color: #fffbe1;
@@ -604,13 +661,6 @@ table.list th,
   background-color: #daef90;
 }
 
-table.list {
-  border-style: none;
-}
-
-table.list tr {
-  border-bottom: 1px dashed #efe7be;
-}
 
 table.list th, .table-list-header {
   background-color: #f1dada;
@@ -1181,13 +1231,7 @@ div#activity h3 {
 }
 
 div#activity h3::before {
-  content: "";
-  background: white;
-  color: #fff;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  margin-right: 4px;
+  display: none;
 }
 
 div#activity h3 {
@@ -1323,6 +1367,26 @@ div.splitcontentleft > ul {
   background-size: 50px;
 }
 
+#theme_info .theme_description:after {
+	border-bottom: 2px dotted rgb(245, 217, 217);
+	content: '';
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	right: 8px;
+}
+
+#theme_info .theme_description:before {
+	border-top: 2px dotted rgb(245, 217, 217);
+	content: '';
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	right: 8px;
+}
+
+
+
 div.news span.summary {
   color: #82603f;
   margin-left: 10px;
@@ -1334,3 +1398,52 @@ div.news span.summary {
 abbr[title] {
   text-decoration: none;
 }
+
+/*------ Flash style setting --------*/
+div.flash.notice {
+	background-color: #dfffdf;
+	overflow: hidden;
+  padding: 10px;
+  padding-left: 30px;
+  background-image: none;
+  position: relative;
+  border: none;
+  border-left: solid 20px #97f0c2 !important;
+}
+
+div.flash.notice:before {
+	background-color: #fff;
+	border-radius: 50%;
+	content: '';
+	display: block;
+	opacity: 0.7;
+	position: absolute;
+	top: -20px;
+	right: 100px;
+	width: 200px;
+	height: 200px;
+}
+
+div.flash.error, #errorExplanation {
+	overflow: hidden;
+  padding: 10px;
+  padding-left: 30px;
+  background-image: none;
+  position: relative;
+  border: none;
+  border-left: solid 20px #f78484 !important;
+}
+
+div.flash.error:before, #errorExplanation:before {
+	background-color: #fff;
+	border-radius: 50%;
+	content: '';
+	display: block;
+	opacity: 0.7;
+	position: absolute;
+	top: -20px;
+	right: 100px;
+	width: 200px;
+	height: 200px;
+}
+/*------ Flash style setting --------*/
